@@ -1,0 +1,23 @@
+{
+  "name": "minh-sdc-product_desc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theReactors/minh-sdc-product_desc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theReactors/minh-sdc-product_desc/issues"
+  },
+  "homepage": "https://github.com/theReactors/minh-sdc-product_desc#readme",
+  "dependencies": {
+    "pg": "^8.5.1"
+  }
+}
