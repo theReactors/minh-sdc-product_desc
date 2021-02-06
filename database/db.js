@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS products (prod_id SERIAL PRIMARY KEY, prod_desc VARCH
 CREATE TABLE IF NOT EXISTS shippings (ship_id SERIAL PRIMARY KEY, ship_time VARCHAR(16), delivery_time VARCHAR(16), prod_info VARCHAR (128));
 `;
 
-pool.query(createTable, (err) => {
+pool.query(createTable, err => {
   if (err) console.error(err);
 });
 
