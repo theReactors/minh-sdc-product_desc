@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/theReactors/minh-sdc-product_desc#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "dayjs": "^1.10.4",
     "express": "^4.17.1",
     "faker": "^5.3.1",
