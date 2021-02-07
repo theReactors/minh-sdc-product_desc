@@ -70,17 +70,23 @@ let generateShippings = (stream, encoding, callback) => {
 
 generateUsers(userStream, 'utf-8', () => {
   userStream.end();
-  pool.query(`COPY users(user_name, account_name, user_location, user_rating) FROM '${path.join(__dirname, '..', 'users.csv')}' DELIMITER ',' CSV`);
+  pool.query(`COPY users(user_name, account_name, user_location, user_rating) FROM '${path.join(__dirname, '..', 'users.csv')}' DELIMITER ',' CSV`, err => {
+    if (err) console.error(err);
+  });
 });
 
 generateProducts(productStream, 'utf-8', () => {
   productStream.end();
-  pool.query(`COPY products(prod_desc, prod_name, prod_price, prod_sales, prod_discount, prod_stocks) FROM '${path.join(__dirname, '..', 'products.csv')}' DELIMITER ',' CSV`);
+  pool.query(`COPY products(prod_desc, prod_name, prod_price, prod_sales, prod_discount, prod_stocks) FROM '${path.join(__dirname, '..', 'products.csv')}' DELIMITER ',' CSV`, err => {
+    if (err) console.error(err);
+  });
 });
 
 generateShippings(shippingStream, 'utf-8', () => {
   shippingStream.end();
-  pool.query(`COPY shippings(ship_time, delivery_time, prod_info) FROM '${path.join(__dirname, '..', 'shippings.csv')}' DELIMITER ',' CSV`);
+  pool.query(`COPY shippings(ship_time, delivery_time, prod_info) FROM '${path.join(__dirname, '..', 'shippings.csv')}' DELIMITER ',' CSV`, err => {
+    if (err) console.error(err);
+  });
 });
 
 // for (let i = 0; i < 10000000; i++) {
