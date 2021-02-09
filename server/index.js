@@ -4,9 +4,11 @@ const path = require('path');
 const pool = require('../database/index.js');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
